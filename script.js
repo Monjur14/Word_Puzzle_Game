@@ -26,19 +26,21 @@ const resultContainer3 = document.querySelector(".result_screen3");
 const resetBtn = document.querySelector(".reset_btn");
 const resetBtn2 = document.querySelector(".reset_btn2");
 const resetBtn3 = document.querySelector(".reset_btn3");
+const playAgain = document.querySelector(".play_again")
 
 let randomThreeLetterWord = "";
 let fillIndex = 0; 
 let filledInputs = []; 
 let level = 1;
 
-// window.onload = function () {
-//     const audio = document.getElementById("myAudio");
-//     audio.loop = true;
-//     audio.play().catch((error) => {
-//         console.error("Error playing audio:", error);
-//     });
-// };
+window.onload = function () {
+    const audio = document.getElementById("myAudio");
+    audio.volume = 0.3;
+    audio.loop = true;
+    audio.play().catch((error) => {
+        console.error("Error playing audio:", error);
+    });
+};
 
 const threeLetterWords = ["CAT", "DOG", "SUN", "CAR", "HAT", "FOX", "BAT", "RED", "BOX", "PEN"];
 const fourLetterWords = ["LION", "FISH", "BIRD", "TREE", "FLOW", "SNOW", "WIND", "MOON", "STAR", "ROCK"];
@@ -323,4 +325,11 @@ nextButton2.addEventListener("click", () => {
     setTimeout(() => {
         gameMainContainer3.classList.remove("hidden");
     }, 1200);
+})
+
+playAgain.addEventListener("click", () => {
+    screenOne.classList.remove("hidden")
+    screenOne.classList.add("flex")
+    gameMainContainer3.classList.add("hidden");
+    resultContainer3.classList.add("hidden")
 })
