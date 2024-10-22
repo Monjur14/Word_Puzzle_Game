@@ -1,0 +1,420 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+audio{
+    /* display: none; */
+}
+.main_div{
+    width: 350px;
+    min-height: 90vh;
+    background-image: url(./Assets/Images/GameBackground.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    position: relative;
+}
+.flex{
+    display: flex;
+}
+.hidden{
+    display: none;
+}
+.level_container{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.level_name{
+    font-size: 25px;
+    color: #fcb614;
+    text-align: center;
+    background: white;
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+}
+
+.level{
+    width: 85px;
+    height: 100px;
+    animation: level 2s;
+    position: absolute;
+}
+@keyframes level {
+    0%{
+        top: 35%;
+        scale: 1;
+        opacity: 0;
+    }
+    25%{
+        top: 35%;
+        scale: 1.5;
+    }
+    50%{
+        top: 35%;
+        scale: 1.5;
+    }
+    100%{
+        top: 4%;
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+/* screen1 start */
+.screen1{
+    position: absolute;
+    padding-top: 4rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+.game_logo{
+    width: 250px;
+    animation: logoAnimation 1.2s alternate;
+}
+@keyframes logoAnimation {
+    0%{
+        scale: 0.5;
+        transform: translateY(-10px);
+        opacity: 0%;
+    }
+    25%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-25%);
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(-15%);
+    }
+    80%{
+        transform: translateY(-10%);
+    }
+    70%{
+        transform: translateY(-5%);
+    }
+    100%{
+        scale: 1;
+        transform: translateY(0px);
+        opacity: 100%;
+    }    
+}
+
+.play_button{
+    cursor: pointer;
+    width: 150px;
+    margin-bottom: 2rem;
+    animation: playButtonAnimation 1s;
+}
+@keyframes playButtonAnimation {
+    0%{
+        scale: 0.5;
+        opacity: 0%;      
+    }  
+    100%{
+        scale: 1;
+        opacity: 100%;
+    }    
+}
+/* screen1 end */
+
+
+/* screen2 start */
+
+.give_input{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 6px;
+    background: rgb(230, 165, 14);
+    color: #061b77;
+}
+.give_input2{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 6px;
+    background: rgb(230, 165, 14);
+    color: #061b77;
+}
+.give_input3{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 6px;
+    background: rgb(230, 165, 14);
+    color: #061b77;
+}
+.input_div{
+    width: 100%;
+    position: absolute;
+    top: 35%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.randomInputBox{
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 6px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.random_text_box{
+    width: 100%;
+    position: absolute;
+    top: 65%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.random_text_box2{
+    width: 100%;
+    position: absolute;
+    top: 65%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.random_text_box3{
+    width: 100%;
+    position: absolute;
+    top: 65%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn_container{
+    position: absolute;
+    bottom: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.btn_container button{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.check_btn{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.try_again_btn{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.btn_img{
+    display: inline-block;
+    width: 20px;
+}
+
+.reset_btn:hover{
+    transform: translateY(-20px);
+}
+
+.reset_btn:active{
+    scale: 0.6;
+    transition: all;
+    transition-duration: 1000ms;
+}
+
+
+.game_main_container{
+    animation: gameLoaded 1s;
+}
+@keyframes gameLoaded {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.game_main_container2 {
+    animation: gameLoaded 1s;
+}
+.game_main_container3 {
+    animation: gameLoaded 1s;
+}
+/* screen2 end */
+
+/* Result Screen 1 Start */
+.result_screen1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result_screen2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result_screen3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.win_pic{
+    width: 250px;
+}
+.lose-h1{
+    position: absolute;
+    font-size: 0.7rem;
+    top: 4%;
+    color: red;
+    background: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+}
+.win-h1{
+    position: absolute;
+    font-size: 0.7rem;
+    top: 4%;
+    color: #000;
+    background: #fff;
+    padding: 0.3rem 1rem;
+    border-radius: 5px;
+}
+.win_container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.win_container2{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.win_container3{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lose_container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lose_container2{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.lose_container3{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.next_btn{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 4rem;
+}
+.play_again{
+    width: 120px;
+}
+/* Result Screen 1 End */
+
+
+
+@media (min-height: 800px) and (max-height: 3000px) {
+    .main_div {
+        width: 350px;
+        min-height: 700px;
+        background-image: url(./Assets/Images/GameBackground.jfif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px;
+        position: relative;
+    }
+}
