@@ -33,15 +33,6 @@ let fillIndex = 0;
 let filledInputs = []; 
 let level = 1;
 
-window.onload = function () {
-    const audio = document.getElementById("myAudio");
-    audio.volume = 0.3;
-    audio.loop = true;
-    audio.play().catch((error) => {
-        console.error("Error playing audio:", error);
-    });
-};
-
 const threeLetterWords = ["CAT", "DOG", "SUN", "CAR", "HAT", "FOX", "BAT", "RED", "BOX", "PEN"];
 const fourLetterWords = ["LION", "FISH", "BIRD", "TREE", "FLOW", "SNOW", "WIND", "MOON", "STAR", "ROCK"];
 const fiveLetterWords = ["EAGLE", "APPLE", "RIVER", "STONE", "PLANT", "WATER", "CLOUD", "MOUNT", "BRAVE", "GRASS"];
