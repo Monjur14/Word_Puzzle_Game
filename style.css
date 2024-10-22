@@ -142,7 +142,7 @@ audio{
 
 /* screen2 start */
 
-.give_input{
+.give_input, .give_input2, .give_input3{
     width: 45px;
     height: 45px;
     text-align: center;
@@ -150,30 +150,10 @@ audio{
     font-weight: bolder;
     border: none;
     border-radius: 6px;
-    background: rgb(230, 165, 14);
-    color: #061b77;
-}
-.give_input2{
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    border: none;
-    border-radius: 6px;
-    background: rgb(230, 165, 14);
-    color: #061b77;
-}
-.give_input3{
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: bolder;
-    border: none;
-    border-radius: 6px;
-    background: rgb(230, 165, 14);
-    color: #061b77;
+    /* background: rgb(230, 165, 14); */
+    background: #fff;
+    /* color: #061b77; */
+    color: #000;
 }
 .input_div{
     width: 100%;
